@@ -21,7 +21,7 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.pli
 ## Disk Utility
 diskutil apfs setPassphraseHint [diskXsX] -user disk -clear
 
-## Clear Icon Services Cache:
+## Clear Icon Services Cache
 sudo rm -rf /Library/Caches/com.apple.iconservices.store
 
 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user
@@ -30,20 +30,20 @@ sudo find /private/var/folders/ \   -name com.apple.dock.iconcache -exec rm {} \
 
 sudo find /private/var/folders/ \   -name com.apple.iconservices -exec rm -rf {} \
 
-## Restore Missing Share Menu Options:
+## Restore Missing Share Menu Options
 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed
 
-## Restore Launchpad:
+## Restore Launchpad
 defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
 
-## Launchd Agent:
+## Launchd Agent
 sudo chmod 644 /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
 sudo chown root:wheel /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
 sudo launchctl load /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
-## System Info:
+## System Info
 system_profiler SPHardwareDataType
 
 sysctl -n machdep.cpu.brand_string
@@ -52,18 +52,18 @@ kextstat | grep -v com.apple
 
 pmset -g log | grep -e "Display is turned on"
 
-## Local Backup:
+## Local Backup
 sudo tmutil disablelocal
 sudo tmutil enablelocal
 
-## Delete Xcode:
+## Delete Xcode
 sudo /Developer/Library/uninstall-devtools --mode=all
 
-## Reload Audio Kext:
+## Reload Audio Kext
 sudo kextunload /System/Library/Extensions/AppleHDA.kext
 sudo kextload /System/Library/Extensions/AppleHDA.kext
 
-## Misc.:
+## Misc.
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
 
 /usr/libexec/java_home -V
@@ -72,7 +72,7 @@ sudo /Applications/Parallels\ Desktop.app/Contents/MacOS/Parallels\ Service.app/
 
 sudo mdutil -E /
 
-## PKG:
+## PKG
 pkgutil --pkg-info the-package-name.pkg
 
 pkgutil --only-files --files the-package-name.pkg | tr '\n' '\0' | xargs -n 1 -0 sudo rm -i
@@ -83,26 +83,26 @@ sudo pkgutil --forget the-package-name.pkg
 
 cd/
 
-## Show All Files:
+## Show All Files
 defaults write com.apple.finder AppleShowAllFiles Yes && killall Finder
 
 defaults write com.apple.finder AppleShowAllFiles No && killall Finder
 
-## .DS_Store:
+## .DS_Store
 sudo find / -name .DS_Store -delete; killall Finder
 
 rm ~/Library/Preferences/com.apple.finder.plist; killall Finder
 
-## Clear Font Cache:
+## Clear Font Cache
 sudo atsutil databases -remove
 (/System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreText.framework/Resources/)
 
-## Dock Icon:
+## Dock Icon
 sudo find /private/var/folders/ -name com.apple.dock.iconcache -exec rm {} \;
 
 killall Dock
 
-## Mac App Store:
+## Mac App Store
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -113,7 +113,7 @@ sudo rm -fr /var/db/krb5kdc
 
 sudo /usr/libexec/configureLocalKDC
 
-## Optimization:
+## Optimization
 sudo mdutil -E /
 
 sudo defaults write /System/Library/LaunchDaemons/com.apple.coreservices.appleevents ExitTimeOut -int 1
