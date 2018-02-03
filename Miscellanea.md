@@ -11,7 +11,7 @@ PermitRootLogin without-password
 
 PasswordAuthentication no
 
-## Useful shell scripts
+## Useful Shell scripts
 sudo service sshd restart
 
 ssh -Q cipher
