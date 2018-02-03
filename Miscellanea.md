@@ -33,5 +33,18 @@ ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
   
   fastboot flash recovery recovery.img
 
-# Other stuff
+# macOS Path
+## Icons
+/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources
+
+## System Sounds
+/System/Library/Components/CoreAudio.component/Contents/SharedSupport/SystemSounds/
+
+## SF Mono
+/Applications/Xcode.app/Contents/SharedFrameworks/DVTKit.framework/Versions/Current/Resources/Fonts/
+
+
+
+
+# Other Stuff
 /etc/sudoers
