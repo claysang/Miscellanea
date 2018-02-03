@@ -1,0 +1,21 @@
+#!/bin/sh
+
+/bin/echo -n '' | /usr/bin/pbcopy
+
+sudo periodic daily weekly monthly
+
+sudo atsutil databases -remove
+
+sudo rm -rf ~/Library/Caches
+sudo rm -rf ~/Library/Saved\ Application\ State
+
+rm -rf ~/.rnd
+rm -rf ~/.subversion
+rm -rf ~/.viminfo
+
+rm -rf ~/.bash_history
+rm -rf ~/.bash_sessions
+
+rm -rf ~/.Trash/*
+
+echo "Mysophobia, satisfied."
