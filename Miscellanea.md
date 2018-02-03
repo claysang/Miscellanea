@@ -4,9 +4,11 @@ ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub
 
 ## Configure for highest security available
 Ciphers chacha20-poly1305@openssh.com,aes256-ctr
+
 KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp521
 
 PermitRootLogin without-password
+
 PasswordAuthentication no
 
 ## Useful shell scripts
@@ -19,11 +21,16 @@ ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
 
 # Android
   adb devices
+
   adb reboot bootloader
+
   adb sideload *.zip
 
+
   fastboot oem unlock
+
   fastboot flash boot boot.img
+  
   fastboot flash recovery recovery.img
 
 # Other stuff
