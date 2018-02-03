@@ -1,4 +1,4 @@
-# macOS System Related Shell Commands
+# macOS System-Related Shell Commands
 
 ## Network
 sudo killall -HUP mDNSResponder
