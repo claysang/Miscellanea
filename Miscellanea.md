@@ -33,6 +33,12 @@ ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
   
   fastboot flash recovery recovery.img
 
+# Linux
+## Check memory usage
+ps -e -o 'pid,comm,args,pcpu,rsz,vsz,stime,user,uid'
+
+ps -e -o 'pid,comm,args,pcpu,rsz,vsz,stime,user,uid' | grep xxx | sort -nrk5
+
 # macOS Path
 ## Icons
 /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources
