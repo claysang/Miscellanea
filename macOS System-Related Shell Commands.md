@@ -59,9 +59,12 @@ sudo tmutil enablelocal
 ## Delete Xcode
 sudo /Developer/Library/uninstall-devtools --mode=all
 
-## Reload Audio Kext
+## Kext
 sudo kextunload /System/Library/Extensions/AppleHDA.kext
 sudo kextload /System/Library/Extensions/AppleHDA.kext
+
+kextstat | grep -v com.apple
+kextfind -b
 
 ## Misc.
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
