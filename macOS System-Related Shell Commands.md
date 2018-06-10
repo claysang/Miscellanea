@@ -61,9 +61,11 @@ sudo /Developer/Library/uninstall-devtools --mode=all
 
 ## Kext
 sudo kextunload /System/Library/Extensions/AppleHDA.kext
+
 sudo kextload /System/Library/Extensions/AppleHDA.kext
 
 kextstat | grep -v com.apple
+
 kextfind -b
 
 ## Misc.
