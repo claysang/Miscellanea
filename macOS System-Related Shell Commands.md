@@ -112,6 +112,8 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+defaults delete com.apple.appstore.commerce
+
 ## [com.apple.kerberos.kdc](http://automatica.com.au/2012/01/how-to-give-a-mac-os-x-machine-a-new-kerberos-identity/)
 
 sudo rm -fr /var/db/krb5kdc
