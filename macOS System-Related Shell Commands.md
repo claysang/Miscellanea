@@ -23,6 +23,7 @@ diskutil apfs setPassphraseHint [diskXsX] -user disk -clear
 
 ### Mount EFI
 sudo mkdir /Volumes/EFI
+
 sudo mount -t msdos /dev/diskXsX /Volumes/EFI
 
 ## Clear Icon Services Cache
