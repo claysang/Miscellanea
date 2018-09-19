@@ -21,6 +21,10 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.pli
 ## Disk Utility
 diskutil apfs setPassphraseHint [diskXsX] -user disk -clear
 
+### Mount EFI
+sudo mkdir /Volumes/EFI
+sudo mount -t msdos /dev/diskXsX /Volumes/EFI
+
 ## Clear Icon Services Cache
 sudo rm -rf /Library/Caches/com.apple.iconservices.store
 
