@@ -48,8 +48,6 @@ system_profiler SPHardwareDataType
 
 sysctl -n machdep.cpu.brand_string
 
-kextstat | grep -v com.apple
-
 pmset -g log | grep -e "Display is turned on"
 
 ## Local Backup
