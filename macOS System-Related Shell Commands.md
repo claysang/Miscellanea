@@ -48,6 +48,11 @@ sudo chown root:wheel /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
 sudo launchctl load /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
+## Update Bash
+chsh -s /usr/local/bin/bash
+
+echo $BASH && echo $BASH_VERSION
+
 ## System Info
 system_profiler SPHardwareDataType
 
