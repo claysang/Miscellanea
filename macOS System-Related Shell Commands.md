@@ -53,6 +53,11 @@ chsh -s /usr/local/bin/bash
 
 echo $BASH && echo $BASH_VERSION
 
+etc/shells
+
+## Uninstall all brew packages
+brew list -1 | xargs brew rm
+
 ## System Info
 system_profiler SPHardwareDataType
 
