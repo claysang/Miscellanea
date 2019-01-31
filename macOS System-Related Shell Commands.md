@@ -74,6 +74,7 @@ pmset -g log | grep -e "Display is turned on"
 
 ## Local Backup
 sudo tmutil disablelocal
+
 sudo tmutil enablelocal
 
 ## Delete Xcode
