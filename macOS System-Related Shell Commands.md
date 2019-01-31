@@ -48,6 +48,13 @@ sudo chown root:wheel /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
 sudo launchctl load /Library/LaunchAgents/com.clay.ConfigProxy.plist
 
+## Bluetooth audio
+sudo defaults read bluetoothaudiod
+
+sudo defaults write bluetoothaudiod "Enable AptX codec" -bool true
+
+sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
+
 ## Update Bash
 chsh -s /usr/local/bin/bash
 
