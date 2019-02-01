@@ -72,6 +72,11 @@ sysctl -n machdep.cpu.brand_string
 
 pmset -g log | grep -e "Display is turned on"
 
+## Code Signing
+codesign --verify --verbose
+
+codesign -dv --verbose=4
+
 ## Local Backup
 sudo tmutil disablelocal
 
