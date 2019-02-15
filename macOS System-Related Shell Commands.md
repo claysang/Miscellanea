@@ -103,6 +103,8 @@ sudo /Applications/Parallels\ Desktop.app/Contents/MacOS/Parallels\ Service.app/
 
 sudo mdutil -E /
 
+strings yourPDFfilepath.pdf | grep FontName
+
 ## PKG
 pkgutil --pkg-info the-package-name.pkg
 
