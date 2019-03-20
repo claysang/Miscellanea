@@ -77,6 +77,8 @@ codesign --verify --verbose
 
 codesign -dv --verbose=4
 
+codesign --display --entitlements -
+
 ## Local Backup
 sudo tmutil disablelocal
 
