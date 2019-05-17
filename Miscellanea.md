@@ -23,7 +23,7 @@ ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
 ## Edit `.bash_profile`
 	export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
 
-## Edit `.gitconfig `
+## Edit `.gitconfig`
 	[merge]
 		tool = JetBrains
 	[diff]
