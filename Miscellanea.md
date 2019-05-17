@@ -1,6 +1,6 @@
 # SSH
 ## Show server public key info
-ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub
+ssh-keygen -l -f /etc/ssh/ssh\_host\_ecdsa\_key.pub
 
 ## Configure for highest security available
 Ciphers chacha20-poly1305@openssh.com,aes256-ctr
@@ -19,12 +19,30 @@ ssh -Q cipher
 ## Use SSH through a proxy
 ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
 
+# Using JetBrains IDE as Git External Tool
+## Edit `.bash_profile`
+	export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
+
+## Edit `.gitconfig `
+	[merge]
+		tool = JetBrains
+	[diff]
+		tool = JetBrains
+	[difftool]
+		prompt = false
+	[difftool "JetBrains"]
+		cmd = webstorm diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+		trustExitCode = true
+	[mergetool "JetBrains"]
+		cmd = webstorm merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+		trustExitCode = true
+
 # Android
   adb devices
 
   adb reboot bootloader
 
-  adb sideload *.zip
+  adb sideload \*.zip
 
 
   fastboot oem unlock
