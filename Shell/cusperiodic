@@ -13,6 +13,7 @@ rm -rf ~/.rnd
 rm -rf ~/.subversion
 rm -rf ~/.viminfo
 
+rm -rf ~/.zsh_history
 rm -rf ~/.bash_history
 rm -rf ~/.bash_sessions
 
