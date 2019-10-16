@@ -28,21 +28,21 @@ ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
 
 # Using JetBrains IDE as Git External Tool
 ## Edit `.bash_profile`
-	export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
+export PATH="/Applications/WebStorm.app/Contents/MacOS:$PATH"
 
 ## Edit `.gitconfig`
-	[merge]
-		tool = JetBrains
-	[diff]
-		tool = JetBrains
-	[difftool]
-		prompt = false
-	[difftool "JetBrains"]
-		cmd = webstorm diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
-		trustExitCode = true
-	[mergetool "JetBrains"]
-		cmd = webstorm merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-		trustExitCode = true
+  [merge]
+    tool = JetBrains
+  [diff]
+    tool = JetBrains
+  [difftool]
+    prompt = false
+  [difftool "JetBrains"]
+    cmd = webstorm diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+    trustExitCode = true
+  [mergetool "JetBrains"]
+    cmd = webstorm merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
 
 # Android
   adb devices
