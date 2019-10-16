@@ -2,6 +2,13 @@
 ## Show server public key info
 ssh-keygen -l -f /etc/ssh/ssh\_host\_ecdsa\_key.pub
 
+## [Show server certificate info](https://security.stackexchange.com/a/46255)
+openssl x509 -in x.crt -noout -fingerprint
+
+openssl x509 -in x.crt -noout -md5 -fingerprint
+
+openssl x509 -in x.crt -noout -sha256 -fingerprint
+
 ## Configure for highest security available
 Ciphers chacha20-poly1305@openssh.com,aes256-ctr
 
@@ -48,7 +55,7 @@ ProxyCommand /usr/bin/nc -X 5 -x localhost:6153 %h %p
   fastboot oem unlock
 
   fastboot flash boot boot.img
-  
+
   fastboot flash recovery recovery.img
 
 # Linux
