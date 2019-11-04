@@ -55,6 +55,24 @@ sudo defaults write bluetoothaudiod "Enable AptX codec" -bool true
 
 sudo defaults write bluetoothaudiod "Enable AAC codec" -bool true
 
+sudo defaults write bluetoothaudiod "AAC Bitrate" -int 320
+
+sudo defaults write bluetoothaudiod "AAC CBR" -bool false
+
+sudo defaults write bluetoothaudiod "AAC max packet size" -int 644
+
+sudo defaults write bluetoothaudiod "Apple Bitpool Max" -int 80
+
+sudo defaults write bluetoothaudiod "Apple Bitpool Min" -int 80
+
+sudo defaults write bluetoothaudiod "Apple Initial Bitpool" -int 80
+
+sudo defaults write bluetoothaudiod "Negotiated Bitpool" -int 80
+
+sudo defaults write bluetoothaudiod "Negotiated Bitpool Max" -int 80
+
+sudo defaults write bluetoothaudiod "Negotiated Bitpool Min" -int 80
+
 ## Update Bash
 chsh -s /usr/local/bin/bash
 
