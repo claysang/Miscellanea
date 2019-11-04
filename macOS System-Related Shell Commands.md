@@ -61,9 +61,15 @@ sudo defaults write bluetoothaudiod "AAC CBR" -bool false
 
 sudo defaults write bluetoothaudiod "AAC max packet size" -int 644
 
+sudo defaults write bluetoothaudiod "Apple Bitpool Max (editable)" -int 80
+
 sudo defaults write bluetoothaudiod "Apple Bitpool Max" -int 80
 
+sudo defaults write bluetoothaudiod "Apple Bitpool Min (editable)" -int 80
+
 sudo defaults write bluetoothaudiod "Apple Bitpool Min" -int 80
+
+sudo defaults write bluetoothaudiod "Apple Initial Bitpool (editable)" -int 80
 
 sudo defaults write bluetoothaudiod "Apple Initial Bitpool" -int 80
 
