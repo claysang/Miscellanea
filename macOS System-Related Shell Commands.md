@@ -79,6 +79,10 @@ sudo defaults write bluetoothaudiod "Negotiated Bitpool Max" -int 80
 
 sudo defaults write bluetoothaudiod "Negotiated Bitpool Min" -int 80
 
+sudo killall bluetoothaudiod
+
+sudo killall coreaudiod
+
 ## Update Bash
 chsh -s /usr/local/bin/bash
 
