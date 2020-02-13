@@ -1,6 +1,0 @@
-#!/bin/sh
-
-killall Finder
-killall Dock
-
-echo "Fuck macOS."

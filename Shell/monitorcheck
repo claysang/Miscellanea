@@ -1,3 +1,0 @@
-#!/bin/sh
-
-pmset -g log | grep -e "Display is turned"
