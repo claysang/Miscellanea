@@ -135,6 +135,8 @@ sudo mdutil -E /
 
 strings yourPDFfilepath.pdf | grep FontName
 
+nvram StartupMute=%00
+
 ## PKG
 pkgutil --pkg-info the-package-name.pkg
 
