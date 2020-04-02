@@ -88,6 +88,9 @@ echo $BASH && echo $BASH_VERSION
 
 etc/shells
 
+## ZSH history workaround
+export HISTFILE=$HOME/.zsh_history
+
 ## Uninstall all brew packages
 brew list -1 | xargs brew rm
 
